@@ -1,9 +1,11 @@
 const startBtn = document.getElementById('start-button')
 const nextBtn = document.getElementById('next-button')
 const questionBoxElement = document.getElementById('question-container')
-const titElment = document.getElementById('start-prompt')
+const titElement = document.getElementById('start-prompt')
 const questionElement = document.getElementById('question')
 const answerBtnElement = document.getElementById('answer-buttons')
+
+
 
 let randomQuestions, currentQuesIndex
 //Event Listner
@@ -17,7 +19,7 @@ function startGame(){
     console.log('started')
     startBtn.classList.add('hide')
     
-    titElment.classList.add('hide')
+    titElement.classList.add('hide')
     questionBoxElement.classList.remove('hide')
     randomQuestions = questions.sort(() => Math.random() - .5)
     currentQuesIndex = 0 
@@ -64,7 +66,17 @@ function selectAnswer(e){
         {
             setStatusClass(button, button.dataset.correct)
         })
-    nextBtn.classList.remove('hide')
+    if(randomQuestions.length > currentQuesIndex + 1){
+        nextBtn.classList.remove('hide')
+    } else{
+        
+        startBtn.classList.remove('hide')
+        titElement.replace = 'Gamer over'
+        startBtn.replace = 'Restart'
+        questionBoxElement.classList.add('hide')
+    }
+
+
 }
 
 
@@ -93,12 +105,7 @@ const questions = [
             {text:'8', correct: false},
 
         ],
-        question: 'What is 12 + 14?',
-        answers: [
-            {text: '29', correct: false},
-            {text: '26', correct: true},
-        ],
-
+        
         
             
     }
@@ -110,5 +117,6 @@ const questions = [
 var seconds
 
 function timerCountDown(){
+
 
 }
