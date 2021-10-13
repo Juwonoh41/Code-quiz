@@ -64,3 +64,15 @@ h2{
     color:white;
     border-radius: 15px;
 }
+
+.btn:hover{
+    box-shadow: blue;
+    transition: transform 150ms;
+    transform: scale(1.05);
+}
+
+.btn[disabled]{
+    box-shadow: none;
+    transform: none;
+}
+
