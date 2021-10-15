@@ -6,6 +6,12 @@ var btn2Element = document.getElementById('btn2')
 var btn3Element = document.getElementById('btn3')
 var btn4Element = document.getElementById('btn4')
 var answerBtnElement = document.getElementById('answer-btn')
+
+//Array value
+var arrayValue = 0
+
+//Local storage
+var score = localStorage.getItem("score")
 //Array
 var myQuestions = [
     {
@@ -28,13 +34,13 @@ var myQuestions = [
       ,
       
     },
-    
+   
   ];
 
 
 //timer
 
-var second = 6;
+var second = 10;
 
 var timeInterval = setInterval(countdown, 1000)
 
@@ -44,6 +50,8 @@ function countdown(){
   timerElement.innerHTML = `${newTime}`
   if(second === 0){
     clearInterval(timeInterval)
+    console.log('hi')
+    scoreDisplay()
   }
  
 }
@@ -59,57 +67,72 @@ btn4Element.innerHTML = myQuestions[0].answers[3]
 //Eventlistner
 btn1Element.addEventListener('click', function(){  
   if('click'){
-    var ArrayValue = 0
-    var newArrayValue = ArrayValue+1
-    console.log(newArrayValue)
-    questionElement.innerHTML = myQuestions[newArrayValue].question
-    btn1Element.innerHTML = myQuestions[newArrayValue].answers[0]
-    btn2Element.innerHTML = myQuestions[newArrayValue].answers[1]
-    btn3Element.innerHTML = myQuestions[newArrayValue].answers[2]
-    btn4Element.innerHTML = myQuestions[newArrayValue].answers[3]
+    
+    
+    questionElement.innerHTML = myQuestions[1].question
+    btn1Element.innerHTML = myQuestions[1].answers[0]
+    btn2Element.innerHTML = myQuestions[1].answers[1]
+    btn3Element.innerHTML = myQuestions[1].answers[2]
+    btn4Element.innerHTML = myQuestions[1].answers[3]
+    second -= 5
   }
+  
 })
 
 btn2Element.addEventListener('click', function(){  
   if('click'){
-    var ArrayValue = 0
-    var newArrayValue = ArrayValue+1
-    console.log(newArrayValue)
-    questionElement.innerHTML = myQuestions[newArrayValue].question
-    btn1Element.innerHTML = myQuestions[newArrayValue].answers[0]
-    btn2Element.innerHTML = myQuestions[newArrayValue].answers[1]
-    btn3Element.innerHTML = myQuestions[newArrayValue].answers[2]
-    btn4Element.innerHTML = myQuestions[newArrayValue].answers[3]
+    
+    
+    questionElement.innerHTML = myQuestions[1].question
+    btn1Element.innerHTML = myQuestions[1].answers[0]
+    btn2Element.innerHTML = myQuestions[1].answers[1]
+    btn3Element.innerHTML = myQuestions[1].answers[2]
+    btn4Element.innerHTML = myQuestions[1].answers[3]
+    second -= 5
   }
 })
 
 btn3Element.addEventListener('click', function(){  
   if('click'){
-    var ArrayValue = 0
-    var newArrayValue = ArrayValue+1
-    console.log(newArrayValue)
-    questionElement.innerHTML = myQuestions[newArrayValue].question
-    btn1Element.innerHTML = myQuestions[newArrayValue].answers[0]
-    btn2Element.innerHTML = myQuestions[newArrayValue].answers[1]
-    btn3Element.innerHTML = myQuestions[newArrayValue].answers[2]
-    btn4Element.innerHTML = myQuestions[newArrayValue].answers[3]
+    
+    
+    questionElement.innerHTML = myQuestions[1].question
+    btn1Element.innerHTML = myQuestions[1].answers[0]
+    btn2Element.innerHTML = myQuestions[1].answers[1]
+    btn3Element.innerHTML = myQuestions[1].answers[2]
+    btn4Element.innerHTML = myQuestions[1].answers[3]
+    
   }
+  score++
+
+
 })
 
 btn4Element.addEventListener('click', function(){  
   if('click'){
-    var ArrayValue = 0
-    var newArrayValue = ArrayValue+1
-    console.log(newArrayValue)
-    questionElement.innerHTML = myQuestions[newArrayValue].question
-    btn1Element.innerHTML = myQuestions[newArrayValue].answers[0]
-    btn2Element.innerHTML = myQuestions[newArrayValue].answers[1]
-    btn3Element.innerHTML = myQuestions[newArrayValue].answers[2]
-    btn4Element.innerHTML = myQuestions[newArrayValue].answers[3]
+    
+    
+    questionElement.innerHTML = myQuestions[1].question
+    btn1Element.innerHTML = myQuestions[1].answers[0]
+    btn2Element.innerHTML = myQuestions[1].answers[1]
+    btn3Element.innerHTML = myQuestions[1].answers[2]
+    btn4Element.innerHTML = myQuestions[1].answers[3]
+    second -= 5
   }
 })
 
-//new Question
+//End page
+function scoreDisplay(){
+  answerBtnElement.classList.add('hide')
+  questionElement.innerHTML = "Score: " + score
+  console.log('hi')
+}
+
+//if time end
+
+
+
+
 
 
   
