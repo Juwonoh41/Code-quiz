@@ -1,67 +1,35 @@
 body{
-    color: black;
-    background-color: whitesmoke;
+    background-color: wheat;
 }
 
-.choice-container{
-    display: flex;
-    margin-bottom: 0.8rem;
-    width: 100%;
-    border-radius: 15px;
-    background: rgb(112, 112, 117);
-    color: whitesmoke;
-    font-size: 3rem;
-    min-width: 80rem;
-}
-
-.choice-container:hover {
-    box-shadow: 0 0.4rem 1.5rem 0;
-    transform: scale(1.05);
-    transform: transform 100ms;
-}
-
-.choice-prefix{
-    padding: 2rem 2.5rem;
-}
-
-.choice-text{
+.container{
+    font-size: medium;
     padding: 2rem;
-    width: 100%;
+    margin-top: 3rem;
 }
 
-.correct{
-    background: linear-gradient(32, green, 100%);
-}
-
-.incorrect{
-    background: linear-gradient(32, red, 100%);
-}
-
-#hud{
+#timer-container{
     display: flex;
-    justify-content: space-between;
-    
-}
-
-.hud-prefix{
-    text-align: center;
-    font-size: 2rem;
-}
-
-.hud-main{
-    text-align: center;
-}
-
-#timer{
-    display: inline;
-    width: 20rem;
-    height: 3rem;
-    border: 0.2rem;
-    margin-top: 2rem;
-    padding-top: 30rem;
+    justify-content: center;
     align-items: center;
-    overflow: hidden;
-    font-size: large;
 }
 
+#question-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.btn-container{ 
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+
+}
+
+.btn{
+    vertical-align: middle;
+    padding: 2rem, 0rem;
+}
