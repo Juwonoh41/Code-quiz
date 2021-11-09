@@ -1,110 +1,89 @@
-# Unit 04: Web APIs
+# 04 Web APIs: Code Quiz
 
-## Overview:
+## Your Task
 
-This week, you'll learn about **application programming interfaces**, or **APIs**, which allow web developers to create dynamic, interactive web applications. An essential part of a developer's toolbox, APIs can help add a wide range of functionality to your code.
+At some point in your journey to become a full-stack web developer, you’ll likely be asked to complete a coding assessment&mdash;perhaps as part of an interview process. A typical coding assessment includes both multiple-choice questions and interactive coding challenges. 
 
-APIs are even built directly into the browser. When a webpage is loaded in the browser, an object representation of the webpage (the **Document Object Model**, or **DOM**) is created. As a programming interface, the DOM allows us to use JavaScript to interact with HTML elements.
+To help familiarize you with these tests and allow you to use the skills covered in this unit, this week’s homework invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. 
 
-During class and in this week's homework, you'll practice navigating the DOM. You'll also learn how to create and manipulate HTML elements, add event listeners, create timers, and store data&mdash;all using the power of JavaScript and an API built into the browser itself.
+This week’s coursework will equip you with all the skills you need to succeed in this assignment.
 
-## Key Topics
+## User Story
 
-The following topics will be covered in this unit:
+```
+AS A coding boot camp student
+I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
+SO THAT I can gauge my progress compared to my peers
+```
 
-* [Window object](https://developer.mozilla.org/en-US/docs/Web/API/Window)
+## Acceptance Criteria
 
-* [Document Object Model (DOM)](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
+```
+GIVEN I am taking a code quiz
+WHEN I click the start button
+THEN a timer starts and I am presented with a question
+WHEN I answer a question
+THEN I am presented with another question
+WHEN I answer a question incorrectly
+THEN time is subtracted from the clock
+WHEN all questions are answered or the timer reaches 0
+THEN the game is over
+WHEN the game is over
+THEN I can save my initials and my score
+```
 
-* [Querying the DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll) 
+## Mock-Up
 
-* [Style property](https://developer.mozilla.org/en-US/docs/Web/API/ElementCSSInlineStyle/style)
+The following animation demonstrates the application functionality:
 
-* [Setting element attributes](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute)
+![A user clicks through an interactive coding quiz, then enters initials to save the high score before resetting and starting over.](./Assets/04-web-apis-homework-demo.gif)
 
-* [Creating DOM elements](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
+## Grading Requirements
 
-* [Appending elements](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)
+This homework is graded based on the following criteria: 
 
-* [Intervals and timers](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
+### Technical Acceptance Criteria: 40%
 
-* [Event listeners](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+* Satisfies all of the preceding acceptance criteria.
 
-* [Keyboard events](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent)
+### Deployment: 32%
 
-* [Preventing default browser behavior](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)
+* Application deployed at live URL.
 
-* [Stopping propogation](https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation)
+* Application loads with no errors.
 
-* [Local and session storage](https://developer.mozilla.org/en-US/docs/Web/API/Storage)
+* Application GitHub URL submitted.
 
-* [Data attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
+* GitHub repository contains application code.
 
-## Learning Objectives
+### Application Quality: 15%
 
-You will be employer-ready if you are able to:
+* Application user experience is intuitive and easy to navigate.
 
-* Identify the DOM and its relationship to HTML.
+* Application user interface style is clean and polished.
 
-* Select and dynamically generate HTML elements and content using Web API methods.
+* Application resembles the mock-up functionality provided in the homework instructions.
 
-* Implement DOM API methods to handle events like key presses and mouse clicks.
+### Repository Quality: 13%
 
-* Explain event propagation and implement handling functions.
+* Repository has a unique name.
 
-* Store and retrieve data using the browser's local and session storage.
+* Repository follows best practices for file structure and naming conventions.
 
-## Technical Interview Preparation
+* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
 
-You will be employer-competitive if you are able to solve the following algorithms and successfully complete the assessments.
+* Repository contains multiple descriptive commit messages.
 
-### Algorithms
+* Repository contains quality readme file with description, screenshot, and link to deployed application.
 
-Practicing algorithm-based interview questions is one of the best ways to prepare for interviews. Watch the `📹 Let's Code` video(s) for tips and tricks on how to solve the algorithm.
+## Review
 
-  * [01: Log Even Nums](./03-Algorithms/01-log-even-nums)
+You are required to submit BOTH of the following for review:
 
-  * [02: Countdown](./03-Algorithms/02-countdown)
+* The URL of the functional, deployed application.
 
-  * [03: Sum of Array](./03-Algorithms/03-sum-array)
-
-    * 📹 [Let's Code Sum of Array!](https://2u-20.wistia.com/medias/iz6bzizsnj)
-
-### Assessments
-
-Assess your knowledge by answering technical interview questions and solving coding challenges.
-
-* [Unit 04 Assessment](https://forms.gle/jYRX4XMiVDo2UpxS9)
-
-## Homework
-
-In this week's homework, you'll build a timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. This week’s coursework focuses on the skills you need to succeed in this assignment.
-
-## Career Connection
-
-Career services material for this unit is located in the [Career Connection folder](./04-Career-Connection/README.md). For more information about career services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [career services website](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
-
-## Heads-Up
-
-When you are are researching DOM and event resources, you might find jQuery solutions. jQuery is a lightweight JavaScript library that allows you execute JavaScript functionality with just a few lines of code. We'll cover jQuery in the next unit, but for now stick to resources that don't rely on jQuery or the `$` variable.
-
-## Resources
-
-Here are some additional resources to help solidify the topics covered in this unit.
-
-### Code Review Videos
-
-Watch the `📹 Code Review` video(s) to help you grasp the concept of each topic.
-
-  * [📹 Code Review: DOM API Methods!](https://2u-20.wistia.com/medias/bz7gtz1g9a)
-
-### Git Guide
-
-Refer to the Git Guide to review the git concept for this unit. Watch the `📹 Git Guide` video for an additional walkthrough of the git concept.
-
-  * 📖 [Git Guide: Git Pull Requests](./01-Activities/27-Evr_Git-Pull-Request)
-
-  * 📹 [Git Guide Video: Git Pull Requests](https://2u-20.wistia.com/medias/nddwentncb)
+* The URL of the GitHub repository, with a unique name and a readme describing the project.
 
 ---
+
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
