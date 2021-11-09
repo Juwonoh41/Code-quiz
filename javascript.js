@@ -45,8 +45,25 @@ var myQuestions = [
         
     },
     {
-      question: "Done"
-    }
+      question: "What was luffy's last name?",
+      answers: [
+         "Newgate",
+         "Dragon",
+         "Monkey",
+         "Uchiha"
+      ],
+        
+    },
+    {
+      question: "What gave luffy his powers?",
+      answers: [
+         "Chakra",
+         "Hamon",
+         "Devil Fruit",
+         "Nen"
+      ],
+        
+    },
   ];
 
 
@@ -83,6 +100,9 @@ btn4Element.innerHTML = myQuestions[questionIndex].answers[3]
 btn1Element.addEventListener('click', () => {
   questionIndex++
   console.log('hello world')
+  if(questionIndex > 2){
+    window.location.href = "./result.html"
+  }
   questionElement.innerHTML = myQuestions[questionIndex].question
 
   btn1Element.innerHTML = myQuestions[questionIndex].answers[0]
@@ -90,16 +110,13 @@ btn1Element.addEventListener('click', () => {
   btn3Element.innerHTML = myQuestions[questionIndex].answers[2]
   btn4Element.innerHTML = myQuestions[questionIndex].answers[3]
   second-=5
-  if(questionIndex > 2){
-    window.location.href = "./result.html"
-  }
+  
 })
 btn2Element.addEventListener('click', () => {
   questionIndex++
   console.log('hello world')
-  if(questionIndex >= 3){
+  if(questionIndex > 2){
     window.location.href = "./result.html"
-    
   }
 
   questionElement.innerHTML = myQuestions[questionIndex].question
@@ -115,6 +132,9 @@ btn2Element.addEventListener('click', () => {
 btn3Element.addEventListener('click', () => {
   questionIndex++
   console.log('hello world')
+  if(questionIndex > 2){
+    window.location.href = "./result.html"
+  }
   questionElement.innerHTML = myQuestions[questionIndex].question
 
   btn1Element.innerHTML = myQuestions[questionIndex].answers[0]
@@ -122,15 +142,15 @@ btn3Element.addEventListener('click', () => {
   btn3Element.innerHTML = myQuestions[questionIndex].answers[2]
   btn4Element.innerHTML = myQuestions[questionIndex].answers[3]
   score++
-  if(questionIndex >= 3){
-    window.location.href = "./result.html"
-    
-  }
+  
 })
 
 btn4Element.addEventListener('click', () => {
   questionIndex++
   console.log('hello world')
+  if(questionIndex > 2){
+    window.location.href = "./result.html"
+  }
   questionElement.innerHTML = myQuestions[questionIndex].question
 
   btn1Element.innerHTML = myQuestions[questionIndex].answers[0]
@@ -138,10 +158,7 @@ btn4Element.addEventListener('click', () => {
   btn3Element.innerHTML = myQuestions[questionIndex].answers[2]
   btn4Element.innerHTML = myQuestions[questionIndex].answers[3]
   second-=5
-  if(questionIndex >= 3){
-    window.location.href = "./result.html"
-    
-  }
+  
 
 })
 
