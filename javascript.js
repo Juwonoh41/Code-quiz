@@ -69,7 +69,7 @@ var myQuestions = [
 
 //timer
 
-var second = 10000;
+var second = 1000;
 
 var timeInterval = setInterval(countdown, 1000)
 
@@ -100,7 +100,7 @@ btn4Element.innerHTML = myQuestions[questionIndex].answers[3]
 btn1Element.addEventListener('click', () => {
   questionIndex++
   console.log('hello world')
-  if(questionIndex > 2){
+  if(questionIndex > 5){
     window.location.href = "./result.html"
   }
   questionElement.innerHTML = myQuestions[questionIndex].question
@@ -115,7 +115,7 @@ btn1Element.addEventListener('click', () => {
 btn2Element.addEventListener('click', () => {
   questionIndex++
   console.log('hello world')
-  if(questionIndex > 2){
+  if(questionIndex > 5){
     window.location.href = "./result.html"
   }
 
@@ -132,7 +132,7 @@ btn2Element.addEventListener('click', () => {
 btn3Element.addEventListener('click', () => {
   questionIndex++
   console.log('hello world')
-  if(questionIndex > 2){
+  if(questionIndex > 5){
     window.location.href = "./result.html"
   }
   questionElement.innerHTML = myQuestions[questionIndex].question
@@ -148,7 +148,7 @@ btn3Element.addEventListener('click', () => {
 btn4Element.addEventListener('click', () => {
   questionIndex++
   console.log('hello world')
-  if(questionIndex > 2){
+  if(questionIndex > 5){
     window.location.href = "./result.html"
   }
   questionElement.innerHTML = myQuestions[questionIndex].question
